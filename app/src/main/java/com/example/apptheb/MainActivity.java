@@ -2,9 +2,12 @@ package com.example.apptheb;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -24,23 +27,46 @@ public class MainActivity extends AppCompatActivity {
                 switch (menuItem.getItemId())
                 {
                     case R.id.filme_menu:
-                        Toast.makeText(MainActivity.this, "You clicked Home filme icon", Toast.LENGTH_SHORT).show();
+                        OpenFilmeteste();
                         return true;
                     case R.id.music:
-                        Toast.makeText(MainActivity.this, "You clicked music icon", Toast.LENGTH_SHORT).show();
+                        OpenMusic();
                         return true;
                     case R.id.sinal:
-                        Toast.makeText(MainActivity.this, "Your clicked sinal icon", Toast.LENGTH_SHORT).show();
+                        OpenSinal();
                         return true;
                     case R.id.mais:
-                        Toast.makeText(MainActivity.this, "Your clicked mais icon", Toast.LENGTH_SHORT).show();
+                        OpenMais();
                         return true;
                     default:
                         return false;
                 }
 
+
+
             }
         });
 
+
+    }
+    public void OpenFilmeteste() {
+        Intent intent = new Intent(this, FilmeActivity.class);
+        startActivity(intent);
+    }
+    public void OpenMusic() {
+        Intent intent = new Intent(this, MusicActivity.class);
+        startActivity(intent);
+    }
+    public void OpenSinal() {
+        Intent intent = new Intent(this, SinalActivity.class);
+        startActivity(intent);
+    }
+    public void OpenMais() {
+        Intent intent = new Intent(this, MaisActivity.class);
+        startActivity(intent);
     }
 }
+
+
+
+
