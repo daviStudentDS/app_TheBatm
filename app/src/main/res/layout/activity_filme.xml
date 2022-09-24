@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/reds"
     tools:context=".MaisActivity">
 
     <Button
@@ -12,21 +11,18 @@
         android:layout_width="424dp"
         android:layout_height="114dp"
         android:layout_gravity="bottom"
-        android:layout_marginBottom="12dp"
         android:backgroundTint="@color/reds"
+
         android:text="Voltar"
         android:textColor="#000000"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-7dp"
+        tools:layout_editor_absoluteY="-10dp" />
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="325dp"
-        android:layout_height="341dp"
+        android:layout_width="405dp"
+        android:layout_height="344dp"
         android:layout_centerInParent="true"
         android:layout_marginStart="80dp"
         android:layout_marginEnd="80dp"
@@ -34,9 +30,63 @@
         android:src="@drawable/capan"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnVoltar"
         app:layout_constraintVertical_bias="0.25" />
 
+    <TextView
+        android:id="@+id/lbl_explicativo"
+        android:layout_width="134dp"
+        android:layout_height="322dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="280dp"
+        android:text="O filme &quot;THE BATMAN&quot; protagonizado por Robert Pattison e dirigido por Matt Reeves conta a história de uma Gothan e um Batman sombrios. Onde na procura por vingança o homem morcego irá se envolver em um grande mistério da cidade relacionadas a máfia de gothan, a família do vigilante e ao vilão &quot;CHARADA&quot; que desafiará a mente do nosso cruzado encapuzado."
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="450dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <VideoView
+            android:id="@+id/trailer_view"
+            android:layout_width="411dp"
+            android:layout_height="228dp"
+            android:layout_gravity="center_horizontal"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="487dp" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/txttrailer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="76dp"
+        android:text="CONFIRA A SEGUIR O TRAILER THE BATMAN:"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_explicativo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

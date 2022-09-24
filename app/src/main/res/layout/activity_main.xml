@@ -17,4 +17,10 @@
         app:menu="@menu/menu_xml_file"
         />
 
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="match_parent"
+        android:layout_height="556dp"
+        app:srcCompat="@drawable/logicon" />
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
